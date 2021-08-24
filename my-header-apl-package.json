@@ -1,0 +1,79 @@
+{
+	"type": "APL",
+	"version": "1.1",
+	"settings": {},
+	"theme": "dark",
+	"import": [{
+		"name": "alexa-layouts",
+		"version": "1.1.0"
+	}],
+	"layouts": {
+		"MyHeader": {
+			"parameters": [
+				"headerTitleText",
+				"headerTitleFontSize",
+				"headerSubtitleText",
+				"headerSubtitleFontSize",
+				"headerImageSource",
+				"headerImageWidth",
+				"headerImageHeight",
+				"headerContainerHeight",
+				"headerFrameBackgroundColor",
+				"headerTitleColor",
+				"headerSubtitleColor"
+			],
+			"items": [{
+				"type": "Container",
+				"height": "${headerContainerHeight}",
+				"items": [{
+					"type": "Frame",
+					"backgroundColor": "${headerFrameBackgroundColor}",
+					"items": [{
+						"type": "Container",
+						"width": "100vw",
+						"height": "20vh",
+						"direction": "row",
+						"items": [{
+								"type": "Container",
+								"width": "50%",
+								"height": "100%",
+								"items": [{
+										"type": "Text",
+										"text": "${headerTitleText}",
+										"color": "${headerTitleColor}",
+										"fontSize": "${headerTitleFontSize}",
+										"left": "10%",
+										"top": "10%"
+									},
+									{
+										"type": "Text",
+										"text": "${headerSubtitleText}",
+										"color": "${headerSubtitleColor}",
+										"fontSize": "${headerSubtitleFontSize}",
+										"left": "10%",
+										"top": "10%"
+									}
+								]
+							},
+							{
+								"type": "Container",
+								"width": "50%",
+								"height": "100%",
+								"items": [{
+									"type": "Image",
+									"source": "${headerImageSource}",
+									"width": "${headerImageWidth}",
+									"height": "${headerImageHeight}",
+									"left": "65%",
+									"top": "10%"
+								}]
+							}
+						]
+					}]
+				}]
+			}]
+		}
+
+	}
+
+}
